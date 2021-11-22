@@ -1,0 +1,28 @@
+wrapper {
+    gradleVersion = '4.10.2'
+}
+ 
+buildscript {
+    repositories {
+        jcenter()
+    }
+ 
+    dependencies {
+        classpath 'org.javafxports:jfxmobile-plugin:1.0.0-b5'
+    }
+}
+ 
+apply plugin: 'org.javafxports.jfxmobile'
+ 
+mainClassName = 'com.josephattieh.project'
+ 
+repositories {
+    jcenter()
+}
+ 
+jfxmobile {
+   
+    android {
+        applicationPackage = 'com.josephattieh.java'
+    }
+}
