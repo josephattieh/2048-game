@@ -1,6 +1,6 @@
 # 2048 Game
 
-_Submitted on Nov 2019_
+_Submitted on Nov 2019 for the course COE 593 - COE Application_
 
 # Requirements:
 
