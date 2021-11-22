@@ -1,25 +1,27 @@
 package com.josephattieh.project;
 
-import java.util.Scanner;
+import javafx.application.Application;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.Scene;
+import javafx.stage.Screen;
+import javafx.stage.Stage;
 
-public class Main {
+public class M extends Application{
 
 	public static void main(String[] args) {
+		launch(args); 
 		// TODO Auto-generated method stub
-
-		java.util.Scanner scan = new Scanner(System.in);
-		String s1 = scan.nextLine();
-		scan.nextLine();
-		int n = scan.nextInt();
-		
-		String v ="eiou";
-		String s2=s1+"";
-		for(int i=0; i< s1.length();i++) {
-			if(v.indexOf(s1.charAt(i))!=-1)
-				for(int x=1; x< n; x++)
-					s2= s2.substring(0, i+x)+s1.charAt(i)+s2.substring(i+x);
-		}
-		System.out.println(s2);
 	}
 
+	@Override
+	public void start(Stage primaryStage) throws Exception{
+		
+		Scene scene = new GameScene(primaryStage).getScene();
+		primaryStage.setScene(scene);
+		primaryStage.setResizable(false);
+		primaryStage.setTitle("2048 Game");
+		primaryStage.show();
+	
+	}
+	
 }
